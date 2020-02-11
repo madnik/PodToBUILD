@@ -82,7 +82,9 @@ headermap(
   hdrs = [
     ":youtube-ios-player-helper_cxx_union_hdrs"
   ],
-  deps = [],
+  deps = [
+    ":youtube-ios-player-helper_Bundle_Assets"
+  ],
   visibility = [
     "//visibility:public"
   ]
@@ -209,8 +211,13 @@ swift_library(
       )
     }
   ),
-  deps = [],
-  data = []
+  deps = [
+    ":youtube-ios-player-helper_Bundle_Assets"
+  ],
+  data = [],
+  visibility = [
+    "//visibility:public"
+  ]
 )
 filegroup(
   name = "youtube-ios-player-helper_hdrs",
